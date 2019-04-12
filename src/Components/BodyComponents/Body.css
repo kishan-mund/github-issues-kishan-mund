@@ -1,0 +1,34 @@
+.issue-box{
+    height: auto;
+    width: 100%;
+    background-color: rgba(202, 224, 250, 0.11); 
+    border: 1px solid;
+    padding: 1rem .5rem;
+    margin-bottom: 1px;
+    border-radius: 1rem;
+    display: flex;
+}
+
+.issue-title{
+    padding-bottom: .2rem;
+    display: flex;
+}
+
+.icon{
+    margin:auto 0;
+}
+
+.issue-details{
+    padding-left: 1rem;
+}
+
+.issue-title-box{
+    line-height: 2rem;
+}
+
+.chat-icon{
+    position: absolute;
+    align-self: center;
+    right: 10px;
+
+}
