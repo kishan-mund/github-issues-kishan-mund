@@ -1,16 +1,19 @@
 import React from "react";
 import './Body.css';
+import LabelComponents from "../LabelComponent/LabelComponent"
 import Icon from '@material-ui/core/Icon';
 let data = require("../../issues.json");
 
 const BodyComponents = (props) => {
     return <div >{
         data.map((props) => {
+            console.log(props.labels);
             return <div className="issue-box" >
                 <Icon className="icon" >error_outline</Icon>
                 <div className="issue-details">
                     <div className="issue-title-box">
                         <div className="issue-title">{props.title}</div>
+                        <LabelComponents lbl={props.labels}></LabelComponents>
                     </div>
                     <div>
                         <span>#{props.number}&#09;</span>

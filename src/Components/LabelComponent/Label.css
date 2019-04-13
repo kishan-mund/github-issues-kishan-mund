@@ -1,0 +1,9 @@
+.label-data{
+    display: flex;
+    position: relative;
+}
+
+.label-name{
+
+    margin:0 1rem ;
+}

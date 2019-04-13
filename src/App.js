@@ -4,6 +4,7 @@ import './App.css';
 import HeaderComponents from "./Components/HeaderComponents/HeaderComponents";
 import NavigationComponents from "./Components/NavigationComponents/NavigationComponents"
 import BodyComponents from './Components/BodyComponents/BodyComponents';
+import FooterComponents from './Components/FooterComponents/FooterComponents'
 
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
         <HeaderComponents />
         <NavigationComponents />
         <BodyComponents />
+        <FooterComponents />
       </div>
     );
   }
