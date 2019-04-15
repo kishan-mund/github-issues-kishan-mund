@@ -3,13 +3,13 @@ footer{
     height: 4rem;
     background-color: black;
     width: 100%;
+    justify-content: center;
 }
 
 .logo{
     height: 2rem;
     width: auto;
     margin: 1rem 2rem;
-
 }
 
 .copyright{

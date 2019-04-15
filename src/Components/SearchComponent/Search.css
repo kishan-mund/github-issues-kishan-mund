@@ -1,0 +1,26 @@
+.search-bar{
+    height:4rem;
+    background-color: rgb(232, 255, 227);
+    display: flex;
+    
+}
+
+.search-box{
+    margin: auto 0;
+    border-radius: 10px;
+    height: 2rem;
+    width:20rem;
+    margin: auto 2rem;
+    padding-left: 1rem;
+}
+
+.search-bar-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.menu-components{
+    margin-left: 3rem;
+}
+

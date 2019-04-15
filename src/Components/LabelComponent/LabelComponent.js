@@ -3,12 +3,10 @@ import './Label.css';
 
 
 const LabelComponents = (props) => {
-    console.log(props.lbl)
     return (<span className="label-data">
         {
             props.lbl.map((l) => {
                 return <span >
-
                     <strong style={{ backgroundColor: "#" + l.color }} className="label-name" >{l.name}</strong>
                 </span>
             })
