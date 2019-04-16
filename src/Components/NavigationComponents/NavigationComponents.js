@@ -1,7 +1,6 @@
 import React from "react";
 import './Navigation.css';
 import Icon from '@material-ui/core/Icon';
-let data = require("../../issues.json");
 
 const NavigationComponents = (props) => {
     return <div className="navigation-box">
@@ -15,7 +14,7 @@ const NavigationComponents = (props) => {
             <div className="navigation-bar">
                 <Icon >error_outline</Icon>
                 <div className="navigation-box-item">issues</div>
-                <span className="issue-length">{data.length}</span>
+                <span className="issue-length">{props.data.length}</span>
             </div>
         </div>
     </div >

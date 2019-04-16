@@ -3,12 +3,11 @@ import './Body.css';
 import LabelComponents from "../LabelComponent/LabelComponent"
 import Icon from '@material-ui/core/Icon';
 import moment from "moment";
-let data = require("../../issues.json");
 
 const BodyComponents = (props) => {
     return <div >{
-        data.map((props) => {
-            return <div className="issue-box" >
+        props.data.map((props, e) => {
+            return <div className="issue-box" key={e}>
                 <Icon className="icon" >error_outline</Icon>
                 <div className="issue-details">
                     <div className="issue-title-box">

@@ -6,8 +6,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 
 class SimpleMenu extends React.Component {
-
-
     state = {
         anchorEl: null,
     };
@@ -23,8 +21,8 @@ class SimpleMenu extends React.Component {
 
     render() {
         const { anchorEl } = this.state;
-        const MenuItems = this.props.sortArr.map((arg, el) => {
-            return <MenuItem key={el} onClick={(e) => this.handleClick(e, arg)}>{arg}</MenuItem>
+        const MenuItems = this.props.sortArr.map((arg, e) => {
+            return <MenuItem key={e} onClick={() => this.props.click(arg)}>{arg}</MenuItem>
 
         });
         return (
@@ -44,8 +42,8 @@ class SimpleMenu extends React.Component {
                     onClose={this.handleClose}
                 >
                     {MenuItems}
-                    {/* <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-                    <MenuItem onClick={this.handleClose}>My account</MenuItem>
+                    {/* <MenuItem onClick={this.handleClose}>Profile</MenuItem> */}
+                    {/* <MenuItem onClick={this.handleClose}>My account</MenuItem>
                     <MenuItem onClick={this.handleClose}>Logout</MenuItem> */}
                 </Menu>
             </div >
