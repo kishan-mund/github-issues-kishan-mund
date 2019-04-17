@@ -1,7 +1,6 @@
 import React from "react";
 import './Search.css';
 import MenuComponent from "../MenuComponent/MenuComponents"
-// let data = require("../../issues.json");
 
 
 const SearchComponents = (props) => {
@@ -18,7 +17,7 @@ const SearchComponents = (props) => {
     return (<div className="search-bar" >
         {
             <div className="search-bar-container">
-                <input type="text" className="search-box" placeholder="Search" click={props.search}></input>
+                <input type="text" className="search-box" placeholder="Search" onKeyDown={(e) => props.search(e, e.target.value)}></input>
                 <MenuComponent className="menu-components" name="Sort" sortArr={sort} click={props.click} />
                 <MenuComponent className="menu-components" name="Author" sortArr={uniqueAuthorArr} click={props.author} />
                 <MenuComponent className="menu-components" name="Label" sortArr={uniqueLabelsArr} click={props.label} />

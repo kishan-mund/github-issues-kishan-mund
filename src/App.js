@@ -5,6 +5,8 @@ import NavigationComponents from "./Components/NavigationComponents/NavigationCo
 import BodyComponents from './Components/BodyComponents/BodyComponents';
 import FooterComponents from './Components/FooterComponents/FooterComponents'
 import SearchComponents from './Components/SearchComponent/SearchComponents'
+import Pagination from "react-js-pagination";
+import CommentSection from "./Containers/CommentSection/CommentSection"
 
 
 class App extends Component {
@@ -14,16 +16,26 @@ class App extends Component {
 
     this.state = {
       data: null,
+      activePage: 1,
+      page: 1,
+      loading: false
     };
   }
 
   componentDidMount() {
-    fetch('issues.json')
+    fetch('https://api.github.com/repos/freeCodeCamp/freeCodeCamp/issues?page=')
+      .then(response => response.json())
+      .then(data => this.setState({ data: data }));
+  }
+
+  handlePageChange = data => {
+    console.log(`active page is ${data}`);
+    this.setState({ activePage: data });
+    fetch(`https://api.github.com/repos/freeCodeCamp/freeCodeCamp/issues?page=${data}`)
       .then(response => response.json())
       .then(data => this.setState({ data: data }));
   }
   sortClickHandler = sort => {
-    console.log("jbnvih", sort)
     this.setState(prevState => {
       let newTemp = [];
       if (sort === 'newest') {
@@ -82,16 +94,23 @@ class App extends Component {
 
   render() {
     if (this.state.data === null) {
-      return (<div></div>)
+      return (<div className="loader"></div>)
     }
     else {
       return (
         <div>
-          <HeaderComponents />
+          {/* <HeaderComponents />
           <NavigationComponents data={this.state.data} />
           <SearchComponents data={this.state.data} search={this.searchHandler} click={this.sortClickHandler} author={this.authorHandler} label={this.labelHandler} />
           <BodyComponents data={this.state.data} />
-          <FooterComponents />
+          <Pagination
+            activePage={this.state.activePage}
+            itemsCountPerPage={5}
+            totalItemsCount={100}
+            onChange={this.handlePageChange}
+          />
+          <FooterComponents /> */}
+          <CommentSection data={this.state.data} />
         </div>
       );
     }

@@ -42,9 +42,6 @@ class SimpleMenu extends React.Component {
                     onClose={this.handleClose}
                 >
                     {MenuItems}
-                    {/* <MenuItem onClick={this.handleClose}>Profile</MenuItem> */}
-                    {/* <MenuItem onClick={this.handleClose}>My account</MenuItem>
-                    <MenuItem onClick={this.handleClose}>Logout</MenuItem> */}
                 </Menu>
             </div >
         );

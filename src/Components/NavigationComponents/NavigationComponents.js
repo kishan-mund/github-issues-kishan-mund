@@ -1,6 +1,7 @@
 import React from "react";
 import './Navigation.css';
 import Icon from '@material-ui/core/Icon';
+// let data = require("../../issues.json");
 
 const NavigationComponents = (props) => {
     return <div className="navigation-box">
