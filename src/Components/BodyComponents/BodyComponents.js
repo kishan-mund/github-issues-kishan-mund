@@ -3,6 +3,7 @@ import './Body.css';
 import LabelComponents from "../LabelComponent/LabelComponent"
 import Icon from '@material-ui/core/Icon';
 import moment from "moment";
+import { Link } from 'react-router-dom';
 
 const BodyComponents = (props) => {
     return <div >{
@@ -11,7 +12,11 @@ const BodyComponents = (props) => {
                 <Icon className="icon" >error_outline</Icon>
                 <div className="issue-details">
                     <div className="issue-title-box">
-                        <div className="issue-title">{props.title}</div>
+                        <div className="issue-title">
+                            <Link to={`/issues/${props.number}`} >
+                                {props.title}
+                            </Link>
+                        </div>
                         <LabelComponents lbl={props.labels}></LabelComponents>
                     </div>
                     <div>
