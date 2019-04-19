@@ -1,0 +1,53 @@
+.title{
+    margin: 1rem 0;
+    font-size: 25px;
+    display: flex;
+    color: gray;
+}
+
+.title-name{
+    color: black;
+    font-weight: 400;
+}
+
+.title-author{
+    margin: 1rem 0;
+}
+
+.title-time{
+    color: gray;
+}
+
+.issue-container{
+    border-bottom: 1px solid gray;
+    padding-bottom: 2rem;
+    margin: 2rem;
+}
+
+.comment-container img{
+    width: 100%;
+}
+
+.comment-input{
+    border:1px solid;
+}
+
+.comment-input input{
+    height:5rem;
+    margin:1rem 2rem;
+    width:94%;
+} 
+
+.comment-buttons{
+    justify-content: space-between;
+    display: flex;
+    padding: 0 2.3rem 1rem 2rem;
+}
+
+.comment-buttons button{
+    justify-content: space-between;
+    display: flex;
+    background-color: aqua;
+    padding: .5rem;
+    font-weight: 400;
+}

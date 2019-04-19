@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import HeaderComponents from "./Components/HeaderComponents/HeaderComponents";
 import NavigationComponents from "./Components/NavigationComponents/NavigationComponents"
 import BodyComponents from './Components/BodyComponents/BodyComponents';
-import FooterComponents from './Components/FooterComponents/FooterComponents'
 import SearchComponents from './Components/SearchComponent/SearchComponents'
 import Pagination from "react-js-pagination";
-import CommentSection from "./Containers/CommentSection/CommentSection"
-
-
 class Issues extends Component {
 
   constructor(props) {
@@ -99,7 +94,6 @@ class Issues extends Component {
     else {
       return (
         <div>
-          <HeaderComponents />
           <NavigationComponents data={this.state.data} />
           <SearchComponents data={this.state.data} search={this.searchHandler} click={this.sortClickHandler} author={this.authorHandler} label={this.labelHandler} />
           <BodyComponents data={this.state.data} />
@@ -109,8 +103,6 @@ class Issues extends Component {
             totalItemsCount={100}
             onChange={this.handlePageChange}
           />
-          <FooterComponents />
-          {/* <CommentSection data={this.state.data} /> */}
         </div>
       );
     }
