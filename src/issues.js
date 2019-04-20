@@ -18,7 +18,7 @@ class Issues extends Component {
   }
 
   componentDidMount() {
-    fetch('https://api.github.com/repos/freeCodeCamp/freeCodeCamp/issues?page=')
+    fetch(`https://api.github.com/repos/freeCodeCamp/freeCodeCamp/issues?access_token=${sessionStorage.getItem('token')}`)
       .then(response => response.json())
       .then(data => this.setState({ data: data }));
   }
@@ -26,7 +26,7 @@ class Issues extends Component {
   handlePageChange = data => {
     console.log(`active page is ${data}`);
     this.setState({ activePage: data });
-    fetch(`https://api.github.com/repos/freeCodeCamp/freeCodeCamp/issues?page=${data}`)
+    fetch(`https://api.github.com/repos/freeCodeCamp/freeCodeCamp/issues/page=${data}?access_token=${sessionStorage.getItem('token')}`)
       .then(response => response.json())
       .then(data => this.setState({ data: data }));
   }

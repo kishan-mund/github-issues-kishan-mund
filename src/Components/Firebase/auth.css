@@ -1,0 +1,15 @@
+.auth{
+    justify-content: space-between;
+    display: flex;
+}
+
+.auth-issue{
+    justify-content: center;
+    display: flex;
+}
+
+.auth-button{
+    justify-content: center;
+    display: flex;
+    padding: .5rem 1rem;
+}
