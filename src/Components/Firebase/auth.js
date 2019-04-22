@@ -72,6 +72,9 @@ class Firebase extends Component {
                 <div className="auth-issue">GitHub Issues</div>
                 <div className="auth" >
                     <Link to={`/${this.state.page}`}><button className="auth-button" onClick={this.signInHandler}>Sign In</button></Link>
+                    <Link to={`/1`} >
+                        Issues
+                            </Link>
                     <button className="auth-button" onClick={this.signOutHandler}>Sign Out</button>
                 </div>
             </div>

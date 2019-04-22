@@ -1,0 +1,70 @@
+.err {
+    text-align: center;
+    color: red;
+    margin: 20px auto;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 5px;
+    width: 60vw;
+  }
+  
+  
+  .bodywrap {
+    display: flex;
+    margin: 10px;
+  }
+  
+  .bodywrap1 {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  
+  
+  .bodyhead {
+    background-color: whitesmoke;
+    height: 50px;
+    line-height: 2;
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom: 1px solid gray;
+  }
+  
+  .bodycontent {
+    padding: 20px;
+    width: 80vw;
+  }
+  .bodycontent img {
+    width: 70vw;
+  }
+  .bodycontent pre {
+    width: 70vw;
+  }
+  
+  .pic img {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
+  .none {
+    text-align: center;
+    line-height: 2;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin: 5px auto;
+    color: #202020;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .add input {
+    margin: 10px 10px 100px 80px;
+    width: 78vw;
+    line-height: 2;
+    border-radius: 5px;
+  }
+  
+  

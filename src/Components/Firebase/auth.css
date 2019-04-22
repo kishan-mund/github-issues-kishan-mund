@@ -6,6 +6,9 @@
 .auth-issue{
     justify-content: center;
     display: flex;
+
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .auth-button{
